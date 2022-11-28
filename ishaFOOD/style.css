@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=M+PLUS+1:wght@400;500;600;700;800&family=Satisfy&display=swap');
 :root{
     --main-color:#ffffff;
     --second-color:#f9f9f9;
@@ -18,11 +18,12 @@
     text-decoration: none;
     list-style-type: none;
     transition: all .3s ease-in-out;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'M PLUS 1', sans-serif;
 }
 html{
     background-color: var(--main-color);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 .main-container {
     width: 100%;
@@ -31,7 +32,7 @@ html{
     margin: auto;
 }
 .pad-3{
-    padding: 0 .3rem;
+    padding: 0 .45rem;
 }
 .skinColor {
     color: var(--skin-color2);
@@ -222,15 +223,14 @@ nav .navigator .nav-list .nav-links:hover{
 /* hero-end */
 /* about */
 .about {
-    min-height: 100vh;
     min-width: 100%;
     background-image: url('image/food-removebg-preview.png');
     background-position: left;
     background-repeat: no-repeat;
     background-size:contain;
+    margin: 4rem 0;
 }
 .about-container {
-   height: 70vh;
    display: flex;
    align-items: center;
    justify-content: right;
@@ -238,7 +238,6 @@ nav .navigator .nav-list .nav-links:hover{
 
 .about-contents {
     max-width: 50%;
-    height: 100%;
     padding-top: 4rem;
     background: rgba(255, 255, 255, 0.3);
 }
@@ -322,7 +321,6 @@ nav .navigator .nav-list .nav-links:hover{
 .menu-container-Inf .menu-image {
     width: 100%;
     height: 18rem;
-    background-color: red;
     overflow: hidden;
 }
 .menu-container-Inf .menu-image img{
@@ -473,6 +471,93 @@ nav .navigator .nav-list .nav-links:hover{
     width: 16rem;
 }
 /* bookTable END */
+/* instagram */
+.instagram {
+    background-color: var(--main-color);
+}
+.instagram-container {
+    width: 100%;
+    margin: 4rem 0 4rem 0;
+}
+.instagram-container h3{
+    font-size: var(--h3-font);
+    margin: 1rem 0 2rem 0;
+}
+.instagram-posts {
+    width: 100%;
+}
+.post-container{
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    flex-basis: 16rem;
+    margin: .8rem .4rem .8rem 0;
+}
+.post-container img{
+    width: 100%;
+}
+.post-container .post-int {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ background: #ffffff9b;
+ height: 5.5rem;
+ padding: 0  .8rem;
+}
+.like-comment-share{
+    font-size: 1.4rem;
+    width: 100%;
+}
+.like-comment-share .fa-heart,.like-comment-share .fa-comments{
+    color: var(--skin-color);
+    margin-right: .4rem;
+    cursor: pointer;
+}
+.like-comment-share .fa-arrow-up-right-from-square{
+    float: right;
+}
+
+.like-comment i:hover{
+    color: #f40e0e;
+    font-size: 1.4rem;
+}
+.post-int i{
+    cursor: pointer;
+}
+/* instagram END */
+footer{
+    min-height: 40vh;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(10rem, 1fr));
+    gap: .9rem;
+}
+.footer-content {
+    min-height: 10rem;
+}
+.footer-container .footer-content .logo h3{
+    font-size: var(--h3-font);
+}
+.footer-content h3{
+    font-size: 1.3rem;
+}
+.footer-content h3 a{
+    color: var(--text-color);
+}
+.footer-content ul {
+    margin-top: 1rem;
+}
+.footer-content ul li{
+    margin-top: .35rem;
+    text-transform: capitalize;
+}
+.footer-copyright {
+    width: 100%;
+    height: 10rem;
+    background-color: var(--second-color);
+}
 /* media Quarel */
 @media (max-width: 930px) {
     .about {
@@ -534,9 +619,16 @@ nav .navigator .nav-list .nav-links:hover{
    }
 }
 @media(max-width: 550px){
-    .grid-autfit-16{
-        display: grid;
-        justify-content: center;
-        grid-template-columns: auto;
+    .booking-set-container h3{
+      font-size: 1.9rem;
     }
+    .book-container{
+        width: 100%;
+    }
+    .about-contents {
+         min-width: 100%; 
+    }
+    .about-container {
+        justify-content: left;
+     }
 }
